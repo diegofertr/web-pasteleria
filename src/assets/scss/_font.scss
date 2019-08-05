@@ -1,2 +1,11 @@
 // importando fuentes
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Lobster|Ma+Shan+Zheng|Pacifico|Lato|Montserrat|Raleway&display=swap');
+
+$fontFamilyFira: "Fira Sans", sans-serif;
+$fontFamilyLobster: 'Lobster', cursive;
+$fontFamilyPacifico: 'Pacifico', cursive;
+$fontFamilyZheng: 'Ma Shan Zheng', cursive;
+$fontFamilyLato: 'Lato', sans-serif;
+$fontFamilyMontserrat: 'Montserrat', sans-serif;
+$fontFamilyRaleway: 'Raleway', sans-serif;
