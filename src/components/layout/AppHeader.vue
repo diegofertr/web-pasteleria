@@ -26,7 +26,7 @@
     </el-menu-item>
     <el-menu-item index="5">
       <el-button type="primary" @click="dev">
-        <i class="fas el-icon-fa-code" style="color:white"></i>
+        <i class="fas el-icon-fa-terminal" style="color:white"></i>
         Conviértete en Desarrollador
       </el-button>
     </el-menu-item>
