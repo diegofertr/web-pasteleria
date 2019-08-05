@@ -77,14 +77,14 @@ export default {
       console.log(key, keyPath);
     },
     open() {
-      this.$message('This is a message.');
+      this.$message("This is a message.");
     },
     openVn() {
       const h = this.$createElement;
       this.$message({
-        message: h('p', null, [
-          h('span', null, 'Message can be '),
-          h('i', { style: 'color: teal' }, 'VNode')
+        message: h("p", null, [
+          h("span", null, "Message can be "),
+          h("i", { style: "color: teal" }, "VNode")
         ])
       });
     },

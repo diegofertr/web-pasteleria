@@ -14,14 +14,14 @@
       </li>
       <li>
         <a
-        class="link"
-        href="https://wa.me/59176268647?text=Me%20gustaría%20saber%20el%20precio%20de%20las%20tortas"
-        target="_blank"
-      >
-        ¿Dudas o presupuestos?
-        <i class="fab el-icon-fa-whatsapp"></i>
-        +59176268647
-      </a>
+          class="link"
+          href="https://wa.me/59176268647?text=Me%20gustaría%20saber%20el%20precio%20de%20las%20tortas"
+          target="_blank"
+        >
+          ¿Dudas o presupuestos?
+          <i class="fab el-icon-fa-whatsapp"></i>
+          +59176268647
+        </a>
       </li>
       <li>
         <a href="#">
@@ -67,6 +67,8 @@ export default {
   font-weight: 500;
 
   .nav-brand {
+    margin-left: 30px;
+
     a {
       text-decoration: none;
       color: inherit;
@@ -91,13 +93,13 @@ export default {
       }
 
       a.nav-button {
-        background:#f74815;
+        background: #f74815;
         color: white;
         border-color: #d92a00;
-        padding: .5em;
+        padding: 0.5em;
         font-size: 1em;
         border-radius: 2px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         cursor: pointer;
 
         i {
@@ -111,8 +113,5 @@ export default {
       }
     }
   }
-
 }
-
-
 </style>
