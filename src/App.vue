@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Inicio</router-link> |
+      <router-link to="/about">Acerca de</router-link>
     </div>
     <router-view />
   </div>
@@ -25,5 +25,22 @@
       color: #42b983;
     }
   }
+}
+
+// Import Font Awesome 5 Free
+$fa-css-prefix: "el-icon-fa";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+// Override Element UI's icon font
+.fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands" !important;
 }
 </style>

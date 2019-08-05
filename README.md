@@ -1,4 +1,7 @@
 # web-pasteleria
+Aplicación web de pastelería
+
+> en desarrollo...
 
 ## Project setup
 ```
