@@ -1,16 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <app-header></app-header>
+    <!-- <div id="nav">
       <router-link to="/">Inicio</router-link> |
       <router-link to="/about">Acerca de</router-link>
-    </div>
+    </div> -->
     <router-view />
   </div>
 </template>
 
+<script>
+import AppHeader from "./components/layout/AppHeader";
+
+export default {
+  components: {
+    AppHeader
+  }
+};
+</script>
+
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
