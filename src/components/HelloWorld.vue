@@ -36,6 +36,21 @@
       <el-progress :percentage="100" status="warning"></el-progress>
       <el-progress :percentage="50" status="exception"></el-progress>
     </el-row>
+    <el-divider></el-divider>
+    <el-row>
+      <el-button :plain="true" @click="open">Show message</el-button>
+      <el-button :plain="true" @click="openVn">VNode</el-button>
+    </el-row>
+    <el-divider></el-divider>
+    <el-row>
+      <el-steps :active="active" finish-status="success">
+        <el-step title="Step 1"></el-step>
+        <el-step title="Step 2"></el-step>
+        <el-step title="Step 3"></el-step>
+      </el-steps>
+
+      <el-button style="margin-top: 12px;" @click="next">Next step</el-button>
+    </el-row>
   </div>
 </template>
 
@@ -47,7 +62,8 @@ export default {
   },
   data() {
     return {
-      activeIndex: "1"
+      activeIndex: "1",
+      active: 0
     };
   },
   methods: {
@@ -59,6 +75,21 @@ export default {
     },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+    },
+    open() {
+      this.$message('This is a message.');
+    },
+    openVn() {
+      const h = this.$createElement;
+      this.$message({
+        message: h('p', null, [
+          h('span', null, 'Message can be '),
+          h('i', { style: 'color: teal' }, 'VNode')
+        ])
+      });
+    },
+    next() {
+      if (this.active++ > 2) this.active = 0;
     }
   }
 };
