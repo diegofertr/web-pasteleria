@@ -12,13 +12,14 @@
 </template>
 
 <script>
-import AppHeader from "./components/layout/AppHeader";
+// @ is an alias to /src
+import AppHeader from '@/components/layout/AppHeader'
 
 export default {
   components: {
     AppHeader
   }
-};
+}
 </script>
 
 <style lang="scss">

@@ -45,14 +45,14 @@
 <script>
 export default {
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
     },
-    dev() {
-      this.$confirm("Para convertirte en desarrollador debes estudiar mucho");
+    dev () {
+      this.$confirm('Para convertirte en chef debes practicar mucho')
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

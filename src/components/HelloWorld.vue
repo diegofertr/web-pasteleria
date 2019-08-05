@@ -56,41 +56,41 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
     msg: String
   },
-  data() {
+  data () {
     return {
-      activeIndex: "1",
+      activeIndex: '1',
       active: 0
-    };
+    }
   },
   methods: {
-    saludar() {
-      this.$confirm("Hola mundo desde pastelería");
+    saludar () {
+      this.$confirm('Hola mundo desde pastelería')
     },
-    format(percentage) {
-      return percentage === 100 ? "Full" : `${percentage}%`;
+    format (percentage) {
+      return percentage === 100 ? 'Full' : `${percentage}%`
     },
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
     },
-    open() {
-      this.$message("This is a message.");
+    open () {
+      this.$message('Este es un mensaje de aviso.')
     },
-    openVn() {
-      const h = this.$createElement;
+    openVn () {
+      const h = this.$createElement
       this.$message({
-        message: h("p", null, [
-          h("span", null, "Message can be "),
-          h("i", { style: "color: teal" }, "VNode")
+        message: h('p', null, [
+          h('span', null, 'El mensaje puede ser  '),
+          h('i', { style: 'color: teal' }, 'VNode')
         ])
-      });
+      })
     },
-    next() {
-      if (this.active++ > 2) this.active = 0;
+    next () {
+      if (this.active++ > 2) this.active = 0
     }
   }
-};
+}
 </script>
