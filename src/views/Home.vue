@@ -11,7 +11,7 @@
       </div>
       <div class="landing-video">
         <video autoplay="autoplay" muted="muted" loop="true" preload="auto">
-          <source src="../assets/video/video-landing.mp4" type="video/mp4">
+          <source src="../assets/video/v-landing.mp4" type="video/mp4">
         </video>
       </div>
       <span class="landing-bottom-arrow">
