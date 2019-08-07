@@ -1,41 +1,31 @@
 <template>
   <nav class="navbar">
     <div class="nav-brand">
-      <!-- Home -->
-      <a href="#" @click="$router.push('/')">
-        <i class="fas el-icon-fa-home"></i> Home
+      <a @click="$router.push('/')">
+        <i class="fas el-icon-fa-birthday-cake"></i> {{ $t('navigation.title') }}
       </a>
     </div>
     <ul class="nav-items">
       <li>
-        <a href="#" @click="$router.push('about')">
-          <i class="fas el-icon-fa-users"></i> Nosotros
+        <a @click="$router.push('about')">
+          <i class="fas el-icon-fa-users"></i> {{ $t('navigation.about') }}
         </a>
       </li>
       <li>
-        <a
-          class="link"
-          href="https://wa.me/59176268647?text=Me%20gustaría%20saber%20el%20precio%20de%20las%20tortas"
-          target="_blank"
-        >
-          ¿Dudas o presupuestos?
-          <i class="fab el-icon-fa-whatsapp"></i>
-          +59176268647
+        <a class="link"
+          href="https://wa.me/59167321079?text=Me%20gustaría%20saber%20el%20precio%20de%20las%20tortas"
+          target="_blank">
+          {{ $t('navigation.message') }} <i class="fab el-icon-fa-whatsapp"></i> {{ $t('navigation.contact') }}
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class="fas el-icon-fa-sign-in-alt"></i> Inicia sesión
+        <a @click="login">
+          <i class="fas el-icon-fa-sign-in-alt"></i> {{ $t('navigation.login') }}
         </a>
       </li>
       <li>
-        <!-- <a class="nav-button" @click="dev">
-          <i class="fas el-icon-fa-code"></i>
-          Se desarrollador
-        </a> -->
         <a class="nav-button" @click="dev">
-          <i class="fas el-icon-fa-utensils"></i>
-          &nbsp;Se cocinero Chefly
+          <i class="fas el-icon-fa-cart-plus"></i>&nbsp;{{ $t('navigation.action_button') }}
         </a>
       </li>
     </ul>
@@ -49,29 +39,43 @@ export default {
       console.log(key, keyPath)
     },
     dev () {
-      this.$confirm('Para convertirte en chef debes practicar mucho')
+      this.$confirm('Para realizar tu pedido debes iniciar sesión con tu cuenta de gmail o facebook')
+    },
+    login () {
+      this.$message('Iniciando sesión, espere un momento...')
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import "../../assets/scss/_font.scss";
+
 .navbar {
   background-color: white;
-  display: grid;
+  display: flex;
   grid-template-columns: 200px auto;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   color: #777;
   font-size: 14px;
   font-weight: 500;
+  height: 50px;
 
   .nav-brand {
-    margin-left: 30px;
+    font-size: 1.5em;
+    color: #fff;
+    display: flex;
+    font-family: $fontFamilyPacifico;
+    background-color: #f74815;
+    height: inherit;
+    align-items: center;
+    padding: 0 10px;
 
     a {
       text-decoration: none;
       color: inherit;
+      cursor: pointer;
     }
   }
 
@@ -86,6 +90,7 @@ export default {
       a {
         color: #777;
         text-decoration: none;
+        cursor: pointer;
 
         &:hover {
           color: #303133;
@@ -95,7 +100,7 @@ export default {
       a.nav-button {
         background: #f74815;
         color: white;
-        border-color: #d92a00;
+        border: 1px solid #d92a00;
         padding: 0.5em;
         font-size: 1em;
         border-radius: 2px;

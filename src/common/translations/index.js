@@ -27,23 +27,22 @@ export default {
     },
     navigation: {
       admin: 'Administración',
-      login: 'Iniciar sesión',
+      login: 'Inicia sesión',
       register: 'Registrarme',
       logout: 'Cerrar sesión',
       my_account: 'Mi cuenta',
-      home: 'Inicio',
-      shop: 'Tienda',
+      title: 'Pastelería Justi',
+      about: 'Nosotros',
       language: 'Selecciona el idioma',
+      message: '¿Dudas o presupuestos?',
       close_menu: 'Cerrar menú',
-      products_in_cart: 'Carrito ({number})',
-      cart: 'Carrito',
-      orders: 'Mis pedidos'
+      action_button: 'Realiza tu pedido',
+      contact: '+59167321079'
     },
     welcome: {
-      title: 'Bienvenido a {app}',
-      content: 'En este curso aprenderás a utilizar Vuejs 2 + Firebase + Firestore para desarrollar aplicaciones en tiempo real con Vuetify desde 0',
-      call_to_action: 'Quiero saber más!',
-      action_button: 'Ver más'
+      title: 'Pastelería Justi',
+      slogan: 'Sabor casero, sabor único',
+      action_button: 'Realiza tu pedido aquí'
     },
     auth: {
       email: 'Correo electrónico',

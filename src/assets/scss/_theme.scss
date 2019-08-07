@@ -13,7 +13,89 @@ body {
 
     .main {
       color: $color;
-      padding: 0 30px;
+      // padding: 0 30px;
+    }
+  }
+}
+
+.landing {
+  height: 90vh;
+  width: 100%;
+  display: block;
+
+  .landing-brand-h1 {
+    margin: 1.5em 0 0 0;
+    font-size: 4.5em;
+    width: 100%;
+    text-align: center;
+    font-family: $fontFamilyPacifico;
+    color: #fff;
+    text-shadow: 0 2px 3px rgba($color: #000, $alpha: 0.9);
+  }
+  
+  .landing-brand-h2 {
+    color: #fff;
+    text-shadow: 0 2px 3px rgba($color: #000, $alpha: 0.9);
+    width: 100%;
+    font-family: $fontFamilyPacifico;
+    font-size: 2em;
+  }
+  
+  .landing-action-bar {
+    margin: 0 auto;
+    // width: 60%;
+    position: relative;
+    z-index: 10;
+  
+    .el-button {
+      // background: #f74815;
+      // color: #fff;
+      border-radius: 5px;
+      color: #f74815;
+      font-family: $fontFamilyFira;
+      font-weight: 500;
+      font-size: 1.5em;
+      width: 25em;
+      border: 1px solid #d92a00;
+    }
+  }
+  
+  .landing-video {
+    // background: url('assets/img/bg-landing.png') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: -26em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .landing-bottom-arrow {
+    position: absolute;
+    // background: red;
+    bottom: .8em;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+    z-index: 20;
+    left: 0;
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .landing {
+    .landing-video {
+      background: url('assets/img/bg-landing.png') no-repeat center;
+  
+      video {
+        display: none;
+      }
     }
   }
 }
