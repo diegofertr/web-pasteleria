@@ -5,12 +5,12 @@ body {
   margin: 0;
 
   #app {
-    font-family: $fontFamilyFira;
+    font-family: $fontFamilyMontserrat;
     font-size: 14px;
     font-weight: 400;
     color: $color;
     text-align: center;
-
+    
     .main {
       color: $color;
       // padding: 0 30px;
@@ -18,6 +18,7 @@ body {
   }
 }
 
+// landing sectio nin home page
 .landing {
   height: 90vh;
   width: 100%;
@@ -52,9 +53,9 @@ body {
       // color: #fff;
       border-radius: 5px;
       color: #f74815;
-      font-family: $fontFamilyFira;
-      font-weight: 500;
-      font-size: 1.5em;
+      font-family: $fontFamilyMontserrat;
+      font-weight: 600;
+      font-size: 1.2em;
       width: 25em;
       border: 1px solid #d92a00;
     }
@@ -75,16 +76,49 @@ body {
   
   .landing-bottom-arrow {
     position: absolute;
-    // background: red;
     bottom: .8em;
     display: inline-block;
     margin: 0 auto;
     width: 100%;
-    color: white;
     z-index: 20;
     left: 0;
-    font-size: 2em;
-    text-align: center;
+    
+    .landing-icon {
+      font-size: 1.1em;
+      color: white;
+      background: rgba($color: #333, $alpha: 0.5);
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+}
+
+// features section in home page
+.features {
+  margin: 1.2rem 4.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .feature {
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+
+    .feature-icon {
+      color: #f74815;
+      font-size: 5em;
+    }
+    
+    .feature-title {
+      color: #333;
+      font-size: 2em;
+      font-family: $fontFamilyMontserrat;
+    }
+
+    .feature-description {
+      font-size: 1em;
+      font-weight: 0;
+      font-family: $fontFamilyMontserrat;
+    }
   }
 }
 
@@ -97,5 +131,9 @@ body {
         display: none;
       }
     }
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

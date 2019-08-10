@@ -58,12 +58,11 @@ export default {
   align-items: center;
   justify-content: space-between;
   color: #777;
-  font-size: 14px;
-  font-weight: 500;
+  // font-size: 14px;
   height: 50px;
 
   .nav-brand {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #fff;
     display: flex;
     font-family: $fontFamilyPacifico;
@@ -85,7 +84,9 @@ export default {
 
     li {
       float: left;
-      margin: 0 10.5px;
+      margin: 0 .8em;
+      font-size: .9em;
+      font-weight: 600;
 
       a {
         color: #777;

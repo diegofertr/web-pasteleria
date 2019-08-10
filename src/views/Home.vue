@@ -15,8 +15,30 @@
         </video>
       </div>
       <span class="landing-bottom-arrow">
-        <i class="fas el-icon-fa-angle-double-down"></i>
+        <i class="fas el-icon-fa-angle-double-down landing-icon"></i>
       </span>
+    </section>
+    <section class="features">
+      <div class="feature">
+        <i class="fas el-icon-fa-utensils feature-icon"></i>
+        <h3 class="feature-title">Repostería Casera</h3>
+        <p class="feature-description">Elige tu repostería favoritas (Por ejemplo, Empanadas de queso, Pan casero, Pan integral, Tortas en su diversidad,...)</p>
+      </div>
+      <div class="feature">
+        <i class="fas el-icon-fa-map-marker-alt feature-icon"></i>
+        <h3 class="feature-title">Localización</h3>
+        <p class="feature-description">En Pastelería Justi podrás elegir el lugar preferido para la entrega de las masitas.</p>
+      </div>
+      <div class="feature">
+        <i class="fas el-icon-fa-clock feature-icon"></i>
+        <h3 class="feature-title">Ahorra tiempo</h3>
+        <p class="feature-description">Pastelería Justi te permite ahorrar tiempo y disfrutar de tus masitas preferidas según tus especificaciones, para una ocasión especial o a diario.</p>
+      </div>
+      <div class="feature">
+        <i class="fas el-icon-fa-comments feature-icon"></i>
+        <h3 class="feature-title">Basado en opiniones</h3>
+        <p class="feature-description">Nuestra calidad y sabor está avalada por los comentarios de nuestros clientes.</p>
+      </div>
     </section>
   </div>
 </template>
