@@ -15,9 +15,7 @@
         </video>
       </div>
       <span class="landing-bottom-arrow">
-        <a href="#features">
-          <i class="fas el-icon-fa-angle-double-down landing-icon"></i>
-        </a>
+        <i class="fas el-icon-fa-angle-double-down landing-icon"></i>
       </span>
     </section>
     <section class="features" id="features">
@@ -44,7 +42,7 @@
     </section>
     <section class="comments">
       <h3 class="comments-title">Lo que dicen de nosotros</h3>
-      <el-carousel indicator-position="outside" class="comments-carousel">
+      <el-carousel type="card" class="comments-carousel">
         <el-carousel-item v-for="item in comments" :key="item">
           <div class="comment">
             <h3 class="comment-name">{{ item.name }}</h3><small>{{ item.username }}</small>
@@ -86,7 +84,13 @@ export default {
 
 <style lang="scss">
 .comments {
-  background: #fff;
+  // background: #fff;
   padding-top: 50px;
+
+  .comment {
+    // max-width: 400px;
+    color: white;
+    background: #333;
+  }
 }
 </style>
