@@ -15,13 +15,15 @@
         </video>
       </div>
       <span class="landing-bottom-arrow">
-        <i class="fas el-icon-fa-angle-double-down landing-icon"></i>
+        <a href="#features">
+          <i class="fas el-icon-fa-angle-double-down landing-icon"></i>
+        </a>
       </span>
     </section>
-    <section class="features">
+    <section class="features" id="features">
       <div class="feature">
         <i class="fas el-icon-fa-utensils feature-icon"></i>
-        <h3 class="feature-title">Repostería Casera</h3>
+        <h3 class="feature-title">Comida Casera</h3>
         <p class="feature-description">Elige tu repostería favorita (Por ejemplo, Tortas en su diversidad, Empanadas, Queques, Pan casero, Pan integral,...)</p>
       </div>
       <div class="feature">
