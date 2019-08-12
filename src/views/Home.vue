@@ -22,7 +22,7 @@
       <div class="feature">
         <i class="fas el-icon-fa-utensils feature-icon"></i>
         <h3 class="feature-title">Repostería Casera</h3>
-        <p class="feature-description">Elige tu repostería favoritas (Por ejemplo, Empanadas de queso, Pan casero, Pan integral, Tortas en su diversidad,...)</p>
+        <p class="feature-description">Elige tu repostería favorita (Por ejemplo, Tortas en su diversidad, Empanadas, Queques, Pan casero, Pan integral,...)</p>
       </div>
       <div class="feature">
         <i class="fas el-icon-fa-map-marker-alt feature-icon"></i>
@@ -40,12 +40,40 @@
         <p class="feature-description">Nuestra calidad y sabor está avalada por los comentarios de nuestros clientes.</p>
       </div>
     </section>
+    <section class="comments">
+      <h3 class="comments-title">Lo que dicen de nosotros</h3>
+      <el-carousel indicator-position="outside" class="comments-carousel">
+        <el-carousel-item v-for="item in comments" :key="item">
+          <div class="comment">
+            <h3 class="comment-name">{{ item.name }}</h3><small>{{ item.username }}</small>
+            <p class="comment-content">{{ item.comment }}</p>
+          </div>
+        </el-carousel-item>
+      </el-carousel>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
   name: 'home',
+  data () {
+    return {
+      comments: [{
+        name: 'Mario',
+        username: '@mrbqr',
+        comment: 'Recomiendo ampliamente los pasteles, son muy deliciosos, con un sabor único y diferente'
+      }, {
+        name: 'Maddizon',
+        username: '@maddi',
+        comment: 'Hacen unos rollos de queso espectaculares, además sus tortas son riquísimas, una vez que los probé no puedo dejarlos jeje'
+      }, {
+        name: 'Fernando',
+        username: '@fertr',
+        comment: 'Los pasteles son de lo mejor, muy sabrosos, además de que la torta puede ser adornado a tu gusto'
+      }]
+    }
+  },
   methods: {
     order () {
       this.$confirm('Para realizar tu pedido por favor inicia sesión con tu cuenta de gmail o facebook')
@@ -53,3 +81,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.comments {
+  background: #fff;
+  padding-top: 50px;
+}
+</style>
