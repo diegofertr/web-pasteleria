@@ -42,14 +42,72 @@
     </section>
     <section class="comments">
       <h3 class="comments-title">Lo que dicen de nosotros</h3>
-      <el-carousel type="card" class="comments-carousel">
+      <!-- <el-carousel class="comments-carousel">
         <el-carousel-item v-for="item in comments" :key="item">
           <div class="comment">
             <h3 class="comment-name">{{ item.name }}</h3><small>{{ item.username }}</small>
             <p class="comment-content">{{ item.comment }}</p>
           </div>
         </el-carousel-item>
-      </el-carousel>
+      </el-carousel> -->
+    </section>
+    <section class="scroll-horizontal">
+      <div class="scrolling-wrapper">
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <h3 class="comment-name">Cosme Fulanito</h3><small>@cosmee_ful</small>
+            <p class="comment-content">Muy buenos pasteles</p>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -64,8 +122,8 @@ export default {
         username: '@mrbqr',
         comment: 'Recomiendo ampliamente los pasteles, son muy deliciosos, con un sabor único y diferente'
       }, {
-        name: 'Maddizon',
-        username: '@maddi',
+        name: 'Gisela',
+        username: '@gisebena',
         comment: 'Hacen unos rollos de queso espectaculares, además sus tortas son riquísimas, una vez que los probé no puedo dejarlos jeje'
       }, {
         name: 'Fernando',
@@ -85,12 +143,26 @@ export default {
 <style lang="scss">
 .comments {
   // background: #fff;
-  padding-top: 50px;
+  padding-top: 100px;
+}
 
-  .comment {
-    // max-width: 400px;
-    color: white;
-    background: #333;
+.comment {
+  // max-width: 400px;
+  color: white;
+  background: #333;
+  max-width: 1000px !important;
+  margin: 0 10px;
+  padding: 10px
+}
+
+.scrolling-wrapper {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+
+  .card {
+    display: inline-block;
   }
 }
 </style>
