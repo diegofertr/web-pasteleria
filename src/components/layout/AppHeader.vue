@@ -35,9 +35,6 @@
 <script>
 export default {
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
-    },
     dev () {
       this.$confirm('Para realizar tu pedido debes iniciar sesión con tu cuenta de gmail o facebook')
     },
