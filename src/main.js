@@ -8,6 +8,7 @@ import i18n from '@/config/i18n'
 
 // importando plugin de estilos de element-ui
 import {
+  Avatar,
   Pagination,
   Dialog,
   Autocomplete,
@@ -89,6 +90,7 @@ import {
 
 import lang from 'element-ui/lib/locale/lang/es'
 import locale from 'element-ui/lib/locale'
+import VueAgile from 'vue-agile'
 
 Vue.use(Pagination)
 Vue.use(Dialog)
@@ -163,8 +165,11 @@ Vue.use(Calendar)
 Vue.use(Backtop)
 Vue.use(PageHeader)
 Vue.use(CascaderPanel)
+Vue.use(Avatar)
 
 Vue.use(Loading.directive)
+
+Vue.use(VueAgile)
 
 // configure language
 locale.use(lang)
