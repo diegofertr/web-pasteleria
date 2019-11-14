@@ -41,26 +41,29 @@
       </div>
     </section>
     <section class="comments">
-      <h3 class="comments-title">Lo que dicen de nosotros</h3> <br>
+      <h3 class="comments-title">Lo que dicen de nosotros</h3>
       <div class="carousel-section">
         <agile class="thumbnails" :options="options">
-          <el-card class="box-card" v-for="item in comments" :key="item.name">
-            <div class="text item">
-              <div>
-                <el-avatar :size="80" :src="item.urlImage"></el-avatar><br>
-                <small><strong>{{ item.username}}</strong></small>
-              </div>
-              <p>{{ item.comment }}</p>
+          <div class="comment-card" v-for="item in comments" :key="item.name">
+            <p class="comment-card-description">"{{ item.comment }}"</p>
+            <div class="comment-card-user">
+              <el-avatar :size="30" :src="item.urlImage"></el-avatar>
+              <span>{{ item.name }} - <strong>{{ item.username }}</strong></span>
             </div>
-          </el-card>
-          <!-- botones de navegacion carousel -->
-          <template slot="prevButton"><i class="fas el-icon-fa-chevron-left"></i></template>
-          <template slot="nextButton"><i class="fas el-icon-fa-chevron-right"></i></template>
+          </div>
+          <!-- <template slot="prevButton"><i class="fas el-icon-fa-chevron-left"></i></template>
+          <template slot="nextButton"><i class="fas el-icon-fa-chevron-right"></i></template> -->
         </agile>
       </div>
     </section>
     <section class="sponsors">
       <h3 class="sponsors-title">Aliados</h3>
+    </section>
+    <section class="footer">
+      <el-footer>
+        <h3>Footer</h3>
+        <p>{{ new Date().getFullYear() }} &copy; Diego F. Ticona Ramos</p>
+      </el-footer>
     </section>
   </div>
 </template>
@@ -86,7 +89,7 @@ export default {
           // para resoluciones mayores a 900
           breakpoint: 900,
           settings: {
-            navButtons: true,
+            // navButtons: true,
             slidesToShow: 3
           }
         }, {
@@ -100,27 +103,27 @@ export default {
       comments: [{
         // COMENTARIOS QUE PUEDEN SER OBTENIDOS CON FIREBASE DE LOS USUARIOS REGISTRADOS
         name: 'Mario',
-        urlImage: 'https://muratselek.com.tr/wp-content/uploads/2019/01/yorum-icon-avatar-men.png',
+        urlImage: 'https://www.invitartes.com/wp-content/uploads/2016/05/invitartes-perfil-linkedin.jpg',
         username: '@mrbqr',
         comment: 'Recomiendo ampliamente los pasteles, son muy deliciosos, con un sabor único y diferente'
       }, {
         name: 'Eulalia',
-        urlImage: 'https://img2.freepng.es/20180403/eqe/kisspng-computer-icons-teacher-clip-art-avatar-5ac3db46122e89.4817606315227850940745.jpg',
+        urlImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWwR4SRAqKXfOMsz3ofIUhxtEQDiFtdnBR4CXv89VhorsC9nm8&s',
         username: '@eulis',
         comment: 'Hacen unos rollos de queso espectaculares, además sus tortas son riquísimas, una vez que los probé no puedo dejarlos jeje'
       }, {
         name: 'Fernando',
-        urlImage: 'https://muratselek.com.tr/wp-content/uploads/2019/01/yorum-icon-avatar-men.png',
+        urlImage: 'https://www.ischool.berkeley.edu/sites/default/files/default_images/avatar.jpeg',
         username: '@fertr',
         comment: 'Los pasteles son de lo mejor, muy sabrosos, además de que la torta puede ser adornado a tu gusto'
       }, {
         name: 'Joaquin',
-        urlImage: 'https://muratselek.com.tr/wp-content/uploads/2019/01/yorum-icon-avatar-men.png',
+        urlImage: 'https://files.paredro.com/uploads/2016/12/RETRATOS-01.jpg',
         username: '@juaco',
         comment: 'Muy deliciosoooooos'
       }, {
         name: 'Carla',
-        urlImage: 'https://img2.freepng.es/20180403/eqe/kisspng-computer-icons-teacher-clip-art-avatar-5ac3db46122e89.4817606315227850940745.jpg',
+        urlImage: 'https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_msanoja_20160801-194152_imagenes_lv_getty_istock_77607221_small-k0hH--656x437@LaVanguardia-Web.jpg',
         username: '@carly',
         comment: 'Son de muy buena calidad, comparable a las grandes marcas del país, buen futuro, sigan adelante :)'
       }]
@@ -138,30 +141,7 @@ export default {
 .comments {
   // background: #fff;
   padding-top: 100px;
-}
-
-.comment {
-  // max-width: 400px;
-  color: white;
-  background: #333;
-  max-width: 1000px !important;
-  margin: 0 10px;
-  padding: 10px
-}
-
-.scrolling-wrapper {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  display: flex;
-
-  .card {
-    display: inline-block;
-  }
-}
-
-.carousel-section {
-  margin: 0 200px;
+  margin: 0 120px;
 }
 
 .agile__nav-button {
@@ -204,5 +184,34 @@ export default {
   width: 300px !important;
   border-radius: 10px;
   margin: 0 5px;
+}
+
+.agile__list {
+  padding: 3rem 0;
+}
+
+.comment-card {
+  background: rgba($color: white, $alpha: 0.6);
+  padding: .8rem;
+  margin: 0 .5rem;
+  // width: 300px !important;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #cacaca;
+
+  .comment-card-description {
+    font-style: italic;
+    padding: 2px 10px;
+  }
+
+  .comment-card-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+
+    span {
+      font-size: .7rem;
+    }
+  }
 }
 </style>
