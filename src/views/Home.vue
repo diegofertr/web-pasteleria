@@ -43,7 +43,23 @@
     <section class="comments">
       <h3 class="comments-title">Lo que dicen de nosotros</h3>
       <div class="carousel-section">
-        <agile class="thumbnails" :options="options">
+        <el-carousel height="400px" direction="horizontal" :interval="5000" arrow="always">
+          <el-carousel-item v-for="item in comments" :key="item.name">
+            <div class="carousel-comment-item">
+              <div class="item-client">
+                <div class="avatar-client">
+                  <el-avatar :size="60" :src="item.urlImage"></el-avatar><br>
+                </div>
+                <span>{{ item.name }} - <strong>{{ item.username }}</strong></span>
+              </div>
+              <p class="item-comment">
+                {{ item.comment }}
+              </p>
+              <i class="fas el-icon-fa-quote-left comment-icon"></i>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+        <!-- <agile class="thumbnails" :options="options">
           <div class="comment-card" v-for="item in comments" :key="item.name">
             <p class="comment-card-description">"{{ item.comment }}"</p>
             <div class="comment-card-user">
@@ -51,9 +67,9 @@
               <span>{{ item.name }} - <strong>{{ item.username }}</strong></span>
             </div>
           </div>
-          <!-- <template slot="prevButton"><i class="fas el-icon-fa-chevron-left"></i></template>
-          <template slot="nextButton"><i class="fas el-icon-fa-chevron-right"></i></template> -->
-        </agile>
+          <template slot="prevButton"><i class="fas el-icon-fa-chevron-left"></i></template>
+          <template slot="nextButton"><i class="fas el-icon-fa-chevron-right"></i></template>
+        </agile> -->
       </div>
     </section>
     <section class="sponsors">
@@ -212,6 +228,67 @@ export default {
     span {
       font-size: .7rem;
     }
+  }
+}
+
+.el-carousel__item {
+  // background: rgba($color: red, $alpha: 0.3);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.carousel-comment-item {
+  display: grid;
+  justify-items: center;
+  padding: 10px;
+  width: 800px;
+  height: 170px;
+
+  background: #fafafa;
+  // background-image: url('../assets/img/backg.jpg');
+  border: 1px solid #ff7300;
+  border-radius: 15px;
+  box-shadow: 0 1px 8px #ff7300;
+  position: relative;
+
+  .item-client {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    position: absolute;
+    top: -40px;
+    z-index: 10;
+    
+    .avatar-client {
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      background: white;
+      // position: relative;
+      // z-index: 10;
+      border: 2px solid #ff7300;
+      height: 70px;
+      width: 70px;
+      line-height: 60px;
+      border-radius: 50%;
+    }
+  }
+
+  .item-comment {
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+
+  .comment-icon {
+    position: absolute;
+    color: #ff7300;
+    top: -30px;
+    left: 40px;
+    font-size: 2.8rem;
   }
 }
 </style>
