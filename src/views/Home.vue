@@ -74,6 +74,17 @@
     </section>
     <section class="sponsors">
       <h3 class="sponsors-title">Aliados</h3>
+
+      <div class="sponsor-content">
+        <div class="sponsor-content-description">
+          <h1>The perfect cake every time!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores possimus dolor cum veritatis molestiae, voluptate quas exercitationem repudiandae modi.</p>
+        </div>
+        <div class="sponsor-content-image">
+          <img src="../assets/img/gallery/cake1.png" alt="torta-1" class="sponsor-image">
+        </div>
+      </div>
+
     </section>
     <section class="footer">
       <el-footer>
@@ -290,5 +301,61 @@ export default {
     left: 40px;
     font-size: 2.8rem;
   }
+}
+
+.sponsors {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/backg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .6;
+    z-index: -1;
+  }
+
+  .sponsor-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+
+    .sponsor-content-description {
+      margin-left: 100px;
+      text-align: left;
+
+      h1 {
+        font-size: 5rem;
+        color: rgb(97, 56, 56);
+      }
+      
+      p {
+        margin-top: -30px;
+        color: black;
+      }
+    }
+
+    .sponsor-content-image {
+      margin-left: 30px;
+      text-align: left;
+
+      .sponsor-image {
+        width: 500px;
+        height: 600px;
+        filter: drop-shadow(5px 10px 30px #444);
+      }
+    }
+  }
+
+
 }
 </style>
